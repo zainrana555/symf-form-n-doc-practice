@@ -1,0 +1,10 @@
+{# templates/user/notifications.html.twig #}
+<h1>Hello {{ user_first_name }}!</h1>
+<p>You have {{ notifications|length }} new notifications.</p>
+<br>
+{{ render(path('notifications_frag', {userNotifications: notifications})) }}
+<br><br>
+
+{# {{ render(controller(
+        'App\\Controller\\LuckController::notificationsFrag', {userNotifications: notifications}
+    )) }} #}
